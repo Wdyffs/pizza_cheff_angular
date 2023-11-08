@@ -16,7 +16,6 @@ export class FooterComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.el)
   }
 
   private _createForm() {

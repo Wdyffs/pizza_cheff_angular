@@ -1,6 +1,9 @@
 <li>
-  <img src="{{product.imgSrc}}" alt="Pizza">
+  <img src="{{product.imgSrc}}" alt="Pizza" (click)="onImgClick()">
   <p class="card_title">{{product.title}}</p>
   <p class="card_description">{{product.description}}</p>
   <button>В корзину</button>
+  <div class="card__image_fs" #fs appRmFs>
+    <img src="{{product.imgSrc}}" alt="pizza">
+  </div>
 </li>
