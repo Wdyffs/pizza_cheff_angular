@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+$main: #ffaf18;
+$main-hover: #c78a1a;
+$logo-txt: #ffc468;
+$nav-txt: #a46b00;
+$hero-txt: #b99150;
+$main-title: #bd985c;
+$card-title: #382400;
+$card-text: #181a1a;
+
+@font-face {
+  font-family: Muller;
+  src: url("assets/fonts/MullerExtraBold.woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("assets/fonts/MullerBold.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Muller;
+  src: url("assets/fonts/MullerRegular.woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+body {
+  font-family: Muller, Georgia, 'Times New Roman', Times, serif;
+  font-weight: 200;
+}
