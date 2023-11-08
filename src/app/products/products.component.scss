@@ -1,0 +1,21 @@
+@import '../../vars.scss';
+
+.products {
+  margin-top: 160px;
+  text-align: center;
+
+  h2 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 55px;
+    color: $main-title;
+    margin-bottom: 66px;
+  }
+}
+
+.products__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
