@@ -50,3 +50,9 @@ li {
   top: 0;
   left: 0;
 }
+
+@media screen and (max-width: 1200px) {
+  li {
+    margin: auto;
+  }
+}
