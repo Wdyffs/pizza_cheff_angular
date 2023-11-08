@@ -1,0 +1,75 @@
+<footer>
+  <section class="footer__text">
+    <h2>Хватит думать! <span>Доставим заказ за 30 минут!</span></h2>
+    <p>
+      Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления
+      заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ
+      бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+      сервисом и сделаем всё, чтобы наш клиент был доволен и не остался
+      голодный!
+    </p>
+  </section>
+  <form name="order" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="id">
+      <input
+        type="text"
+        id="name"
+        placeholder="Ваше имя"
+        formControlName="name"
+        appRestrictDots
+      />
+      <div *ngIf="name.invalid && (name.touched || name.dirty)" class="error">
+        <span *ngIf="name.errors?.['required']">Field is required</span>
+        <span *ngIf="name.errors?.['minlength']">Min length 5 characters</span>
+        <span *ngIf="name.errors?.['maxlength']"
+          >Should contain less than 30 digits</span
+        >
+      </div>
+    </label>
+    <label for="address">
+      <input
+        type="text"
+        id="address"
+        placeholder="Адрес доставки"
+        formControlName="address"
+      />
+      <div
+        *ngIf="address.invalid && (address.touched || address.dirty)"
+        class="error"
+      >
+        <span *ngIf="address.errors?.['required']">Field is required</span>
+        <span *ngIf="address.errors?.['minlength']"
+          >Min length 5 characters</span
+        >
+        <span *ngIf="address.errors?.['maxlength']"
+          >Should contain less than 45 digits</span
+        >
+      </div>
+    </label>
+    <label for="phone">
+      <input
+        type="text"
+        id="phone"
+        placeholder="Телефон"
+        formControlName="phoneNumber"
+      />
+      <div
+        *ngIf="phone.invalid && (phone.touched || phone.dirty)"
+        class="error"
+      >
+        <span *ngIf="phone.errors?.['required']">Field is required</span>
+        <span *ngIf="phone.errors?.['pattern']"
+          >Should contains only digits</span
+        >
+        <span *ngIf="!phone.errors?.['pattern'] && phone.errors?.['minlength']">Min length 5 characters</span>
+
+        <span *ngIf="!phone.errors?.['pattern'] && phone.errors?.['maxlength']"
+          >Should contains less than 25 digits</span
+        >
+      </div>
+    </label>
+    <button type="submit">Оформить заказ</button>
+  </form>
+  <img src="assets/images/footer_pizza.png" alt="pizza" />
+  <div #popup class="footer__modal_success">Success!</div>
+</footer>
